@@ -27,6 +27,7 @@ const contactList = createReducer(initState, {
   },
 
   [deleteContact.fulfilled]: (state, action) => {
+
     const newState = state.filter(
       (contact) => contact.id !== action.payload.id
     );
